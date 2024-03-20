@@ -22,6 +22,12 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 add_subdirectory(main)
 
+#include directories for header files
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+#add the source files to the executable target
+add_executable(R-FORTH main.c variables.c conditions.c control_flow.c functions.c)
+
 
 # You can use add_subdirectory() to add your own work. 
 # Please don't remove the existing subdirectories.
